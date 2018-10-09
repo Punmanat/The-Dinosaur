@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Taviraj');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Taviraj', serif;
+    font-size: 17px; 
+    /* padding: 0 20px; */
+    font-weight: 600;
+}
+.header{
+    position: relative;
+}
+.bg-video{
+    height: 100vh;
+    position: relative;
+    opacity: .9;
+    z-index: -999;
+    overflow: hidden;
+    
+}
+.bg-video__content{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.navbar{
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    top:0;
+    z-index: 2;
+}
+.navbar ul{
+    list-style-type: none;
+}
+.navbar ul li{
+    float: right;
+    padding: 10px 30px;
+}
+.nav-item{
+    text-decoration: none;
+    color:white;
+    font-size: 22px;
+}
+.nav-item:hover{
+    border-bottom: 2px solid white;
+    transition: all .2s;
+}
+.fixed {
+    position: fixed;
+    background-color: rgb(99,76,48);
+    width: 100%;
+    transition: all 1s;
+
+}
+
+/* Text box */
+
+.text-box{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header-primary{
+    color: white;
+    font-size: 55px;
+}
+.header-primary-main{
+    position: relative;
+    display: block;
+    left: 27%;
+    text-shadow: 5px 6px black;
+    animation: rightToLeft 1.25s ease-out;
+}
+.header-primary-sub{
+    display: block;
+    text-shadow: 5px 6px black;
+    animation: leftToRight 1.25s ease-out;
+}
+@keyframes rightToLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    80%{
+        transform: translate(10px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px)
+    }
+}
+@keyframes leftToRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80%{
+        transform: translate(-10px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px)
+    }
+}
+.logo-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-220%, -90%);
+}
+.logo{
+    height: 10vh;
+    animation: rightToLeft .8s ease-in;
+}
+
+/* Confix here */
+.main{
+    padding: 0 30px;
+}
